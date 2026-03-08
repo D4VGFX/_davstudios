@@ -1,0 +1,528 @@
+---
+import '../../styles/global.css';
+import '../../styles/process.css';
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>Il Processo — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        
+    <nav class="navbar">
+        <div class="nav-section nav-left">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+        </div>
+        <div class="nav-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="nav-logo-img"/>
+            </a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="/processo" class="nav-active">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer__inner">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo" class="nav-active">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    
+    <header class="proc-hero">
+        <div class="proc-hero__inner">
+            <p class="proc-hero__label reveal">Come lavoro</p>
+            <h1 class="proc-hero__title reveal delay-1">
+                Il mio<br><span class="proc-hero__em">processo.</span>
+            </h1>
+            <p class="proc-hero__sub reveal delay-2">
+                Ogni progetto è un viaggio con tappe precise.
+                Niente improvvisazione — solo metodo, ascolto e cura
+                per ogni singolo dettaglio.
+            </p>
+        </div>
+
+        
+        <div class="proc-scroll-hint reveal delay-3" aria-hidden="true">
+            <span>Scorri per scoprire</span>
+            <div class="proc-scroll-line"></div>
+        </div>
+    </header>
+
+    
+    <section class="proc-intro-strip">
+        <div class="proc-intro-strip__inner">
+            <div class="pis-item reveal">
+                <span class="pis-num">6</span>
+                <span class="pis-label">Fasi del processo</span>
+            </div>
+            <div class="pis-div"></div>
+            <div class="pis-item reveal delay-1">
+                <span class="pis-num">100%</span>
+                <span class="pis-label">Trasparenza con il cliente</span>
+            </div>
+            <div class="pis-div"></div>
+            <div class="pis-item reveal delay-2">
+                <span class="pis-num">∞</span>
+                <span class="pis-label">Iterazioni fino alla perfezione</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="proc-phases" id="fasi">
+        <div class="proc-phases__track" aria-hidden="true">
+            <div class="proc-track-line" id="track-line"></div>
+        </div>
+
+        <div class="proc-phases__list">
+
+            
+            <article class="phase-item reveal" data-phase="1">
+                <div class="phase-anchor">
+                    <div class="phase-dot" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 8v4l3 3"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <header class="phase-head" role="button" aria-expanded="false" tabindex="0">
+                        <span class="phase-num" aria-hidden="true">01</span>
+                        <div class="phase-head__text">
+                            <h2 class="phase-title">Ascolto & Scoperta</h2>
+                            <p class="phase-tagline">Capire prima di fare.</p>
+                        </div>
+                        <div class="phase-toggle" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="phase-content">
+                        <p class="phase-desc">
+                            Il progetto inizia dall'ascolto. Una call esplorativa di 30–60 minuti
+                            durante la quale capisco il tuo brand, i tuoi obiettivi, il tuo pubblico
+                            e le aspettative. Non si tratta di un brief standard: è una vera
+                            conversazione strategica.
+                        </p>
+                        <ul class="phase-checklist">
+                            <li>Call di discovery (30–60 min)</li>
+                            <li>Analisi del brand esistente</li>
+                            <li>Studio dei competitor</li>
+                            <li>Definizione degli obiettivi primari</li>
+                        </ul>
+                        <div class="phase-deliverable">
+                            <span class="pd-label">Output</span>
+                            <span class="pd-val">Brief firmato + documento di strategia</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="phase-item reveal delay-1" data-phase="2">
+                <div class="phase-anchor">
+                    <div class="phase-dot">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M9 18V5l12-2v13"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <header class="phase-head" role="button" aria-expanded="false" tabindex="0">
+                        <span class="phase-num">02</span>
+                        <div class="phase-head__text">
+                            <h2 class="phase-title">Ricerca & Strategia</h2>
+                            <p class="phase-tagline">Il terreno sotto ogni decisione.</p>
+                        </div>
+                        <div class="phase-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="phase-content">
+                        <p class="phase-desc">
+                            Prima di aprire qualsiasi tool di design, immergo nel contesto.
+                            Analisi del mercato, benchmark visivi, moodboard e posizionamento:
+                            ogni scelta creativa nasce da dati, non da intuizioni casuali.
+                        </p>
+                        <ul class="phase-checklist">
+                            <li>Benchmark di settore</li>
+                            <li>Moodboard e direzioni visive</li>
+                            <li>Definizione del tone of voice</li>
+                            <li>Architettura informativa (se web)</li>
+                        </ul>
+                        <div class="phase-deliverable">
+                            <span class="pd-label">Output</span>
+                            <span class="pd-val">Moodboard + strategia visiva approvata</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="phase-item reveal delay-2" data-phase="3">
+                <div class="phase-anchor">
+                    <div class="phase-dot">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 21V9"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <header class="phase-head" role="button" aria-expanded="false" tabindex="0">
+                        <span class="phase-num">03</span>
+                        <div class="phase-head__text">
+                            <h2 class="phase-title">Wireframe & Struttura</h2>
+                            <p class="phase-tagline">Lo scheletro prima della pelle.</p>
+                        </div>
+                        <div class="phase-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="phase-content">
+                        <p class="phase-desc">
+                            Ogni progetto ha una struttura prima di avere una forma.
+                            Wireframe in bianco e nero, flussi utente e gerarchia dei contenuti:
+                            qui si prendono le decisioni più importanti, prima che il colore
+                            distragga.
+                        </p>
+                        <ul class="phase-checklist">
+                            <li>Wireframe low-fidelity</li>
+                            <li>Mappa dei flussi utente</li>
+                            <li>Gerarchia dei contenuti</li>
+                            <li>Prima revisione con il cliente</li>
+                        </ul>
+                        <div class="phase-deliverable">
+                            <span class="pd-label">Output</span>
+                            <span class="pd-val">Wireframe approvato + user flow</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="phase-item reveal delay-1" data-phase="4">
+                <div class="phase-anchor">
+                    <div class="phase-dot">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="13.5" cy="6.5" r="3.5"/>
+                            <circle cx="6.5" cy="13.5" r="3.5"/>
+                            <circle cx="17.5" cy="17.5" r="3.5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <header class="phase-head" role="button" aria-expanded="false" tabindex="0">
+                        <span class="phase-num">04</span>
+                        <div class="phase-head__text">
+                            <h2 class="phase-title">Design & Visual</h2>
+                            <p class="phase-tagline">Il momento creativo, guidato dalla strategia.</p>
+                        </div>
+                        <div class="phase-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="phase-content">
+                        <p class="phase-desc">
+                            Qui prende vita l'estetica. Alta fedeltà, sistema di design coerente,
+                            tipografia, palette colori e microinterazioni. Non solo bello: ogni
+                            scelta visiva ha una ragione strategica alle spalle.
+                        </p>
+                        <ul class="phase-checklist">
+                            <li>Design system e componenti</li>
+                            <li>Mockup ad alta fedeltà</li>
+                            <li>Prototipo interattivo (Figma)</li>
+                            <li>Due round di revisioni inclusi</li>
+                        </ul>
+                        <div class="phase-deliverable">
+                            <span class="pd-label">Output</span>
+                            <span class="pd-val">Prototipo Figma approvato + design system</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="phase-item reveal delay-2" data-phase="5">
+                <div class="phase-anchor">
+                    <div class="phase-dot">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <header class="phase-head" role="button" aria-expanded="false" tabindex="0">
+                        <span class="phase-num">05</span>
+                        <div class="phase-head__text">
+                            <h2 class="phase-title">Sviluppo & Produzione</h2>
+                            <p class="phase-tagline">Dal pixel al codice.</p>
+                        </div>
+                        <div class="phase-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="phase-content">
+                        <p class="phase-desc">
+                            Il design prende vita in codice pulito, performante e accessibile.
+                            Ogni animazione è curata, ogni transizione ha senso. Lo sviluppo
+                            non è solo tecnico: è un atto creativo che porta il design al
+                            suo massimo potenziale.
+                        </p>
+                        <ul class="phase-checklist">
+                            <li>Sviluppo HTML / CSS / JS</li>
+                            <li>Animazioni e microinterazioni</li>
+                            <li>Ottimizzazione performance (Core Web Vitals)</li>
+                            <li>Testing cross-browser e responsive</li>
+                        </ul>
+                        <div class="phase-deliverable">
+                            <span class="pd-label">Output</span>
+                            <span class="pd-val">Sito/app live su staging per approvazione</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <article class="phase-item reveal delay-1" data-phase="6">
+                <div class="phase-anchor">
+                    <div class="phase-dot phase-dot--final">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <header class="phase-head" role="button" aria-expanded="false" tabindex="0">
+                        <span class="phase-num phase-num--accent">06</span>
+                        <div class="phase-head__text">
+                            <h2 class="phase-title">Lancio & Supporto</h2>
+                            <p class="phase-tagline">Il progetto esce nel mondo.</p>
+                        </div>
+                        <div class="phase-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                <path d="M6 9l6 6 6-6"/>
+                            </svg>
+                        </div>
+                    </header>
+                    <div class="phase-content">
+                        <p class="phase-desc">
+                            Deploy in produzione, handoff completo e supporto post-lancio.
+                            Non sparisco dopo la consegna: resto disponibile per aggiustamenti,
+                            aggiornamenti e per celebrare insieme i risultati.
+                        </p>
+                        <ul class="phase-checklist">
+                            <li>Deploy e configurazione finale</li>
+                            <li>Handoff completo (file, accessi, doc)</li>
+                            <li>30 giorni di supporto gratuito</li>
+                            <li>Report di performance a 30 giorni</li>
+                        </ul>
+                        <div class="phase-deliverable">
+                            <span class="pd-label">Output</span>
+                            <span class="pd-val">Progetto live + documentazione completa</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    
+    <section class="tools-section">
+        <div class="tools-section__inner">
+            <div class="tools-header">
+                <p class="section-label reveal">Strumenti</p>
+                <h2 class="section-title reveal delay-1">
+                    Il mio<br>arsenale.
+                </h2>
+                <p class="tools-sub reveal delay-2">
+                    Gli strumenti con cui traduco idee in prodotti reali.
+                </p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-chip reveal" style="--d:0s">
+                    <div class="tool-chip__icon tc-figma">
+                        <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 28.5C19 25.9804 20.0009 23.5641 21.7825 21.7825C23.5641 20.0009 25.9804 19 28.5 19C31.0196 19 33.4359 20.0009 35.2175 21.7825C36.9991 23.5641 38 25.9804 38 28.5C38 31.0196 36.9991 33.4359 35.2175 35.2175C33.4359 36.9991 31.0196 38 28.5 38C25.9804 38 23.5641 36.9991 21.7825 35.2175C20.0009 33.4359 19 31.0196 19 28.5Z" fill="#1ABCFE"/>
+                            <path d="M0 47.5C0 44.9804 1.00089 42.5641 2.78249 40.7825C4.56408 39.0009 6.98044 38 9.5 38H19V47.5C19 50.0196 17.9991 52.4359 16.2175 54.2175C14.4359 55.9991 12.0196 57 9.5 57C6.98044 57 4.56408 55.9991 2.78249 54.2175C1.00089 52.4359 0 50.0196 0 47.5Z" fill="#0ACF83"/>
+                            <path d="M19 0V19H28.5C31.0196 19 33.4359 17.9991 35.2175 16.2175C36.9991 14.4359 38 12.0196 38 9.5C38 6.98044 36.9991 4.56408 35.2175 2.78249C33.4359 1.00089 31.0196 0 28.5 0H19Z" fill="#FF7262"/>
+                            <path d="M0 9.5C0 12.0196 1.00089 14.4359 2.78249 16.2175C4.56408 17.9991 6.98044 19 9.5 19H19V0H9.5C6.98044 0 4.56408 1.00089 2.78249 2.78249C1.00089 4.56408 0 6.98044 0 9.5Z" fill="#F24E1E"/>
+                            <path d="M0 28.5C0 31.0196 1.00089 33.4359 2.78249 35.2175C4.56408 36.9991 6.98044 38 9.5 38H19V19H9.5C6.98044 19 4.56408 20.0009 2.78249 21.7825C1.00089 23.5641 0 25.9804 0 28.5Z" fill="#A259FF"/>
+                        </svg>
+                    </div>
+                    <span class="tool-chip__name">Figma</span>
+                    <span class="tool-chip__role">Design & Prototipazione</span>
+                </div>
+                <div class="tool-chip reveal" style="--d:.06s">
+                    <div class="tool-chip__icon tc-generic tc-dark">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <span class="tool-chip__name">VS Code</span>
+                    <span class="tool-chip__role">Sviluppo Frontend</span>
+                </div>
+                <div class="tool-chip reveal" style="--d:.12s">
+                    <div class="tool-chip__icon tc-generic tc-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="tool-chip__name">Astro</span>
+                    <span class="tool-chip__role">Framework Web</span>
+                </div>
+                <div class="tool-chip reveal" style="--d:.18s">
+                    <div class="tool-chip__icon tc-generic tc-orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round">
+                            <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/>
+                        </svg>
+                    </div>
+                    <span class="tool-chip__name">Adobe CC</span>
+                    <span class="tool-chip__role">Grafica & Branding</span>
+                </div>
+                <div class="tool-chip reveal" style="--d:.24s">
+                    <div class="tool-chip__icon tc-generic tc-green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.16 1.23 2 2 0 012.14.05h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                        </svg>
+                    </div>
+                    <span class="tool-chip__name">Notion</span>
+                    <span class="tool-chip__role">Project Management</span>
+                </div>
+                <div class="tool-chip reveal" style="--d:.30s">
+                    <div class="tool-chip__icon tc-generic tc-purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <span class="tool-chip__name">Git & GitHub</span>
+                    <span class="tool-chip__role">Version Control</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="principles-section">
+        <div class="principles-section__inner">
+            <p class="section-label reveal" style="text-align:center;">I miei principi</p>
+            <h2 class="section-title reveal delay-1" style="text-align:center; margin-bottom:64px;">
+                Cosa guida<br>ogni mia scelta.
+            </h2>
+
+            <div class="principles-grid">
+                <div class="principle-card reveal">
+                    <div class="pc-num" aria-hidden="true">I</div>
+                    <h3 class="pc-title">Prima le persone</h3>
+                    <p class="pc-text">
+                        Il design non esiste nel vuoto. Ogni scelta — dal colore alla spaziatura —
+                        serve un essere umano reale. Progetto per persone, non per premi.
+                    </p>
+                </div>
+                <div class="principle-card reveal delay-1">
+                    <div class="pc-num" aria-hidden="true">II</div>
+                    <h3 class="pc-title">Semplicità radicale</h3>
+                    <p class="pc-text">
+                        Non aggiungo elementi finché non sono necessari. Tolgo finché non posso più
+                        togliere senza perdere significato. La semplicità è il risultato del lavoro duro.
+                    </p>
+                </div>
+                <div class="principle-card reveal delay-2">
+                    <div class="pc-num" aria-hidden="true">III</div>
+                    <h3 class="pc-title">Dettaglio come cura</h3>
+                    <p class="pc-text">
+                        La qualità si vede nei micromotivi, nella giusta spaziatura, nella
+                        transizione di 200ms al punto giusto. Il dettaglio non è perfezionismo: è rispetto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="proc-cta">
+        <div class="proc-cta__inner reveal">
+            <p class="proc-cta__label">Pronto a iniziare?</p>
+            <h2 class="proc-cta__title">Mettiamo il tuo<br>progetto in moto.</h2>
+            <p class="proc-cta__sub">
+                Racconta la tua idea — rispondo entro 24 ore con un piano chiaro.
+            </p>
+            <div class="proc-cta__actions">
+                <a href="/contattami" class="btn-oval">Inizia il tuo progetto</a>
+                <a href="/progetti" class="btn-ghost">Guarda i progetti →</a>
+            </div>
+        </div>
+    </section>
+
+        
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="footer-logo-img"/>
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <a href="/chi-sono" >CHI SONO</a>
+            <a href="/progetti" >PROGETTI</a>
+            <a href="#" class="nav-active">PROCESSO</a>
+            <a href="/contattami" >CONTATTAMI</a>
+            <a href="/privacy-policy" >PRIVACY</a>
+            <a href="/cookie-policy" >COOKIE</a>
+        </nav>
+        <div class="footer-copyright">
+            <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color:var(--ink);text-decoration:none">_davstudios</a> — Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        import '../../scripts/global.js';
+        import '../../scripts/process.js';
+    </script>
+
+</body>
+</html>

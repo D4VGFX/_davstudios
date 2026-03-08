@@ -1,0 +1,214 @@
+---
+import '../../styles/global.css';
+import '../../styles/projects.css';
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progetti — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<div id="cursor-preview">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#AEAEB2" stroke-width="1.2">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="8.5" cy="8.5" r="1.5"/>
+    <path d="M21 15l-5-5L5 21"/>
+  </svg>
+</div>
+
+    
+    <nav class="navbar">
+        <div class="nav-section nav-left">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti" class="nav-active">PROGETTI</a>
+        </div>
+        <div class="nav-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="nav-logo-img"/>
+            </a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer__inner">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti" class="nav-active">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+<div class="page-header">
+  <div>
+    <p class="header-label" style="animation:fadeUp .6s .05s var(--ease) both">Il mio lavoro</p>
+    <h1 class="header-title" style="animation:fadeUp .75s .12s var(--ease) both">Progetti</h1>
+    <p class="header-sub" style="animation:fadeUp .75s .22s var(--ease) both">Graphic design, identità visive e sviluppo web —<br>ogni progetto racconta una storia.</p>
+  </div>
+  <div class="filter-wrap" style="animation:fadeUp .75s .32s var(--ease) both">
+    <div class="filter-bar">
+      <button class="f-btn active" data-filter="all">
+        Tutti <span class="f-badge" id="b-all">0</span>
+      </button>
+      <button class="f-btn" data-filter="graphic">
+        Graphic Design <span class="f-badge" id="b-graphic">0</span>
+      </button>
+      <button class="f-btn" data-filter="web">
+        Web Developing <span class="f-badge" id="b-web">0</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="project-list" id="project-list">
+
+  <div class="p-row p-row--anim" style="--row-delay:0.45s" data-category="graphic" data-title="Brand Identity — Studio Aura" data-role="Art Direction · Brand Design" data-year="2024" data-tags="Branding,Logo,Typography" data-desc="Identità visiva completa per uno studio creativo milanese. Dal naming alla palette, dalla tipografia al sistema iconografico." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">Brand Identity — Studio Aura</span>
+    <span class="p-cat">Graphic Design</span>
+    <span class="p-year">2024</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.51s" data-category="web" data-title="E-commerce Platform" data-role="Frontend Development · UI Design" data-year="2024" data-tags="React,CSS,UX" data-desc="Piattaforma e-commerce ad alte prestazioni con carrello animato, filtri real-time e checkout ottimizzato per la conversione." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">E-commerce Platform</span>
+    <span class="p-cat">Web Developing</span>
+    <span class="p-year">2024</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.57s" data-category="graphic" data-title="Packaging Serie Botanica" data-role="Packaging Design" data-year="2023" data-tags="Packaging,Illustration,Print" data-desc="Serie di packaging per linea cosmetica bio. Illustrazioni botaniche a mano, stampa in serigrafia a 4 colori." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">Packaging Serie Botanica</span>
+    <span class="p-cat">Graphic Design</span>
+    <span class="p-year">2023</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.63s" data-category="web" data-title="Portfolio Fotografo" data-role="Web Design · Development" data-year="2023" data-tags="Astro,Animation,Photography" data-desc="Portfolio minimalista con galleria fullscreen, lazy loading progressivo e transizioni cinematografiche tra le pagine." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">Portfolio Fotografo</span>
+    <span class="p-cat">Web Developing</span>
+    <span class="p-year">2023</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.69s" data-category="graphic" data-title="Campagna Social — Koto" data-role="Social Media Design" data-year="2023" data-tags="Social,Motion,Campaign" data-desc="Campagna visiva per lancio prodotto su Instagram e TikTok. 40 asset statici e 12 video animati in 2 settimane." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">Campagna Social — Koto</span>
+    <span class="p-cat">Graphic Design</span>
+    <span class="p-year">2023</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.75s" data-category="web" data-title="SaaS Dashboard UI" data-role="UI/UX Design · Prototyping" data-year="2022" data-tags="Figma,SaaS,Dashboard" data-desc="Sistema di design per dashboard analytics B2B. Libreria di 180+ componenti, dark mode, accessibilità WCAG AA." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">SaaS Dashboard UI</span>
+    <span class="p-cat">Web Developing</span>
+    <span class="p-year">2022</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.81s" data-category="graphic" data-title="Editorial — Rivista Forma" data-role="Editorial Design · Layout" data-year="2022" data-tags="Editorial,Print,Typography" data-desc="Progetto editoriale trimestrale dedicato all'architettura contemporanea. 96 pagine, griglia a 12 colonne." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">Editorial — Rivista Forma</span>
+    <span class="p-cat">Graphic Design</span>
+    <span class="p-year">2022</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+  <div class="p-row p-row--anim" style="--row-delay:0.87s" data-category="web" data-title="Landing Page — Fintech" data-role="Web Design · Copywriting" data-year="2022" data-tags="HTML,GSAP,Conversion" data-desc="Landing page ad alta conversione per startup fintech. A/B test su 6 varianti, +34% conversion rate rispetto alla versione precedente." data-link="#">
+    <span class="p-num"></span>
+    <span class="p-title">Landing Page — Fintech</span>
+    <span class="p-cat">Web Developing</span>
+    <span class="p-year">2022</span>
+    <span class="p-arrow">→</span>
+  </div>
+
+</div>
+
+<div id="no-results">Nessun progetto in questa categoria.</div>
+
+<div id="backdrop"></div>
+
+<div id="panel">
+  <div id="panel-img">
+    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#AEAEB2" stroke-width="1">
+      <rect x="3" y="3" width="18" height="18" rx="3"/>
+      <circle cx="8.5" cy="8.5" r="1.5"/>
+      <path d="M21 15l-5-5L5 21"/>
+    </svg>
+  </div>
+  <div class="panel-body">
+    <span class="panel-cat"   id="panel-cat"></span>
+    <h2   class="panel-title" id="panel-title"></h2>
+    <div class="panel-meta">
+      <div><span class="meta-label">Ruolo</span><span class="meta-val" id="panel-role"></span></div>
+      <div><span class="meta-label">Anno</span><span  class="meta-val" id="panel-year"></span></div>
+    </div>
+    <p  class="panel-desc"  id="panel-desc"></p>
+    <div class="panel-tags" id="panel-tags"></div>
+    <a  class="panel-link"  id="panel-link" href="#" target="_blank" rel="noopener">
+      Visita il progetto
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+      </svg>
+    </a>
+    <div class="panel-nav">
+      <button class="nav-btn" id="btn-prev">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <span class="nav-ctr" id="nav-ctr"></span>
+      <button class="nav-btn" id="btn-next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+  <button id="btn-close">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <path d="M18 6 6 18M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+    
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="footer-logo-img"/>
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <a href="/chi-sono" >CHI SONO</a>
+            <a href="#" class="nav-active">PROGETTI</a>
+            <a href="/processo" >PROCESSO</a>
+            <a href="/contattami" >CONTATTAMI</a>
+            <a href="/privacy-policy" >PRIVACY</a>
+            <a href="/cookie-policy" >COOKIE</a>
+        </nav>
+        <div class="footer-copyright">
+            <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color:var(--ink);text-decoration:none">_davstudios</a> — Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>import '../../scripts/global.js';</script>
+    <script>import '../../scripts/projects.js';</script>
+
+</body>
+</html>

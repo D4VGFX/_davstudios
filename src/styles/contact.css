@@ -1,0 +1,762 @@
+/* contattami.css
+   ─────────────────────────────────────────────────────────────────────────────
+   Stili specifici per la pagina Contattami.
+   Richiede global.css già caricato.
+   ─────────────────────────────────────────────────────────────────────────────
+*/
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.contact-hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 48px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 80px;
+  align-items: end;
+  min-height: 52vh;
+}
+
+.contact-hero__left {}
+
+.contact-hero__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.contact-hero__title {
+  font-size: clamp(52px, 7vw, 88px);
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.0;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+
+.contact-hero__em {
+  color: var(--accent);
+}
+
+.contact-hero__sub {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--soft);
+  line-height: 1.75;
+  max-width: 440px;
+}
+
+/* Card destra — disponibilità */
+.contact-hero__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 8px;
+}
+
+.avail-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform .3s var(--spring), box-shadow .3s;
+}
+
+.avail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.avail-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00c471;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(0, 196, 113, 0.15);
+  animation: pulse-green 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(0, 196, 113, 0.15); }
+  50%       { box-shadow: 0 0 0 8px rgba(0, 196, 113, 0.08); }
+}
+
+.avail-text {
+  flex: 1;
+}
+
+.avail-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.avail-sub {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--xsoft);
+}
+
+.avail-arrow {
+  font-size: 18px;
+  color: var(--xsoft);
+  transition: transform .25s var(--spring), color .2s;
+}
+
+.avail-card:hover .avail-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+/* Risposta rapida badge */
+.response-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(0, 113, 227, 0.06);
+  border: 1px solid rgba(0, 113, 227, 0.15);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  align-self: flex-start;
+}
+
+.response-badge svg {
+  flex-shrink: 0;
+}
+
+
+/* ── DIVISORE ─────────────────────────────────────────────── */
+.contact-divider {
+  height: 1px;
+  background: var(--line);
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-left: 48px;
+  margin-right: 48px;
+}
+
+
+/* ── SEZIONE PRINCIPALE: form + info ──────────────────────── */
+.contact-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 48px 100px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 0 80px;
+  align-items: start;
+}
+
+
+/* ── FORM ─────────────────────────────────────────────────── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 36px;
+  display: block;
+}
+
+/* Gruppo di campi */
+.field-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+
+/* Singolo campo */
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--xsoft);
+  margin-bottom: 10px;
+  transition: color .2s;
+}
+
+.field:focus-within label {
+  color: var(--accent);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--xsoft);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.1);
+  background: var(--white);
+}
+
+.field input:hover:not(:focus),
+.field select:hover:not(:focus),
+.field textarea:hover:not(:focus) {
+  border-color: rgba(0,0,0,.18);
+}
+
+.field textarea {
+  resize: none;
+  min-height: 140px;
+  line-height: 1.65;
+}
+
+/* Select custom arrow */
+.field-select-wrap {
+  position: relative;
+}
+
+.field-select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 6px;
+  background: var(--xsoft);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  pointer-events: none;
+  transition: background .2s;
+}
+
+.field-select-wrap:focus-within::after {
+  background: var(--accent);
+}
+
+.field select {
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+/* Checkbox servizi */
+.services-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--xsoft);
+  margin-bottom: 14px;
+  display: block;
+  transition: color .2s;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.service-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  user-select: none;
+}
+
+.service-chip input[type="checkbox"] {
+  display: none;
+}
+
+.service-chip__box {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.5px solid var(--xsoft);
+  background: transparent;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .2s, background .2s;
+}
+
+.service-chip__box svg {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity .2s, transform .2s var(--spring);
+}
+
+.service-chip input:checked ~ .service-chip__box {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.service-chip input:checked ~ .service-chip__box svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.service-chip:has(input:checked) {
+  border-color: var(--accent);
+  background: rgba(0, 113, 227, 0.04);
+}
+
+.service-chip__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--soft);
+  transition: color .2s;
+}
+
+.service-chip:has(input:checked) .service-chip__label {
+  color: var(--accent);
+}
+
+/* Budget select */
+.field-hint {
+  font-size: 11px;
+  color: var(--xsoft);
+  margin-top: 6px;
+}
+
+/* Submit */
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.form-privacy {
+  font-size: 11px;
+  color: var(--xsoft);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.form-privacy a {
+  color: var(--soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 36px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s, transform .3s var(--spring), box-shadow .25s;
+  box-shadow: 0 4px 20px rgba(0, 113, 227, 0.3);
+  white-space: nowrap;
+}
+
+.btn-submit:hover {
+  background: #0077ED;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 113, 227, 0.4);
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+.btn-submit svg {
+  transition: transform .3s var(--spring);
+}
+
+.btn-submit:hover svg {
+  transform: translateX(4px);
+}
+
+/* Stato di successo */
+.form-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  gap: 20px;
+}
+
+.form-success.show {
+  display: flex;
+}
+
+.success-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(0, 196, 113, 0.1);
+  border: 1px solid rgba(0, 196, 113, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: successPop .5s var(--spring) both;
+}
+
+@keyframes successPop {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.success-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+  color: var(--ink);
+}
+
+.success-sub {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--soft);
+  line-height: 1.7;
+}
+
+
+/* ── SIDEBAR INFO ─────────────────────────────────────────── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 80px;
+}
+
+/* Card canale di contatto */
+.channel-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  text-decoration: none;
+  transition: transform .3s var(--spring), box-shadow .3s, border-color .25s;
+}
+
+.channel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0,0,0,.12);
+}
+
+.channel-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ch-email   { background: #f0f4ff; }
+.ch-wa      { background: #e8f8f0; }
+.ch-ig      { background: #fdf0f5; }
+.ch-li      { background: #e8f2fb; }
+
+.channel-text {
+  flex: 1;
+}
+
+.channel-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.channel-handle {
+  font-size: 12px;
+  color: var(--xsoft);
+}
+
+.channel-arrow {
+  color: var(--xsoft);
+  transition: transform .25s var(--spring), color .2s;
+}
+
+.channel-card:hover .channel-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+/* Blocco orari */
+.info-block {
+  background: var(--s2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 28px;
+}
+
+.info-block__title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--xsoft);
+  margin-bottom: 18px;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.schedule-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.schedule-day {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.schedule-time {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--soft);
+}
+
+.schedule-closed {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--xsoft);
+}
+
+/* Fuso orario badge */
+.tz-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 7px 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--soft);
+}
+
+
+/* ── STRIP DARK: "Prima di scrivere" ──────────────────────── */
+.contact-faq-strip {
+  background: var(--ink);
+  padding: 80px 0;
+}
+
+.contact-faq-strip__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0 80px;
+  align-items: start;
+}
+
+.faq-header__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.faq-header__title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 24px 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.faq-q {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.faq-a {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255,255,255,.5);
+  line-height: 1.75;
+}
+
+
+/* ── ANIMAZIONI ───────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.navbar { animation: fadeIn .5s var(--ease) both; }
+
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .contact-hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 80px 24px 60px;
+    min-height: auto;
+  }
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 60px 24px 80px;
+  }
+
+  .contact-info {
+    position: static;
+  }
+
+  .contact-divider {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .contact-faq-strip__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero__title { letter-spacing: -2px; }
+  .field-group { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .form-footer { flex-direction: column; align-items: flex-start; }
+  .btn-submit { width: 100%; justify-content: center; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CONTACT — RESPONSIVE (integra quelli esistenti)
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+    .contact-hero { grid-template-columns: 1fr; padding: 64px 20px 48px; gap: 36px; min-height: auto; }
+    .contact-hero__title { font-size: clamp(44px, 12vw, 60px); letter-spacing: -2px; }
+    .contact-hero__sub { font-size: 15px; }
+    .avail-card { padding: 20px 20px; }
+
+    .contact-divider { margin-left: 20px; margin-right: 20px; }
+    .contact-main { grid-template-columns: 1fr; padding: 48px 20px 64px; gap: 40px; }
+    .contact-info { position: static; }
+
+    .field-group { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .form-footer { flex-direction: column; align-items: flex-start; }
+    .btn-submit { width: 100%; justify-content: center; }
+    .form-privacy { max-width: 100%; }
+
+    .contact-faq-strip { padding: 56px 0; }
+    .contact-faq-strip__inner { grid-template-columns: 1fr; gap: 32px; padding: 0 20px; }
+    .faq-header__title { font-size: 28px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact-hero { grid-template-columns: 1fr; padding: 80px 32px 56px; gap: 40px; min-height: auto; }
+    .contact-main { grid-template-columns: 1fr; padding: 56px 32px 80px; gap: 40px; }
+    .contact-info { position: static; }
+    .contact-divider { margin-left: 32px; margin-right: 32px; }
+    .contact-faq-strip__inner { grid-template-columns: 1fr; gap: 32px; padding: 0 32px; }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .contact-hero { padding: 80px 40px 64px; }
+    .contact-main { padding: 72px 40px 80px; }
+    .contact-faq-strip__inner { padding: 0 40px; }
+}

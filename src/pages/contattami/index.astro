@@ -1,0 +1,392 @@
+---
+import '../../styles/global.css';
+import '../../styles/contact.css';
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>Contattami — _davstudios</title>
+    <meta name="description" content="Hai un progetto in mente? Scrivimi, rispondo entro 24 ore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="nav-section nav-left">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+        </div>
+        <div class="nav-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="nav-logo-img"/>
+            </a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami nav-active">CONTATTAMI</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer__inner">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami nav-active">CONTATTAMI</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    
+    <header class="contact-hero">
+        <div class="contact-hero__left">
+            <span class="contact-hero__label" style="animation:fadeUp .6s .05s var(--ease) both">
+                Iniziamo a parlare
+            </span>
+            <h1 class="contact-hero__title" style="animation:fadeUp .75s .12s var(--ease) both">
+                Hai un<br>
+                <span class="contact-hero__em">progetto?</span>
+            </h1>
+            <p class="contact-hero__sub" style="animation:fadeUp .75s .22s var(--ease) both">
+                Raccontami la tua idea — che sia un brand da costruire,
+                un sito da realizzare o una visione ancora vaga.
+                Sono qui per ascoltare.
+            </p>
+        </div>
+
+        <div class="contact-hero__right" style="animation:fadeUp .75s .3s var(--ease) both">
+            
+            <div class="avail-card">
+                <div class="avail-dot"></div>
+                <div class="avail-text">
+                    <div class="avail-title">Disponibile per nuovi progetti</div>
+                    <div class="avail-sub">Slot aperti per Q2 2026</div>
+                </div>
+                <span class="avail-arrow">→</span>
+            </div>
+
+            
+            <div class="response-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Risposta entro 24 ore
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-divider"></div>
+
+    
+    <section class="contact-main">
+
+        
+        <div>
+            <form id="contact-form" class="contact-form" novalidate>
+
+                <span class="form-section-label reveal">Scrivi un messaggio</span>
+
+                
+                <div class="field-group">
+                    <div class="field reveal">
+                        <label for="nome">Nome *</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Mario Rossi"
+                            required
+                            autocomplete="name"
+                        />
+                    </div>
+                    <div class="field reveal delay-1">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="mario@esempio.it"
+                            required
+                            autocomplete="email"
+                        />
+                    </div>
+                </div>
+
+                
+                <div class="field reveal">
+                    <label for="azienda">Azienda <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--xsoft)">(opzionale)</span></label>
+                    <input
+                        type="text"
+                        id="azienda"
+                        name="azienda"
+                        placeholder="Nome azienda o brand"
+                        autocomplete="organization"
+                    />
+                </div>
+
+                
+                <div class="reveal">
+                    <span class="services-label">Di cosa hai bisogno?</span>
+                    <div class="services-grid">
+                        <label class="service-chip">
+                            <input type="checkbox" name="servizio" value="brand-identity">
+                            <span class="service-chip__box">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="service-chip__label">Brand Identity</span>
+                        </label>
+                        <label class="service-chip">
+                            <input type="checkbox" name="servizio" value="web-design">
+                            <span class="service-chip__box">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="service-chip__label">Web Design</span>
+                        </label>
+                        <label class="service-chip">
+                            <input type="checkbox" name="servizio" value="web-development">
+                            <span class="service-chip__box">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="service-chip__label">Web Development</span>
+                        </label>
+                        <label class="service-chip">
+                            <input type="checkbox" name="servizio" value="social-content">
+                            <span class="service-chip__box">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="service-chip__label">Social & Content</span>
+                        </label>
+                        <label class="service-chip">
+                            <input type="checkbox" name="servizio" value="grafica">
+                            <span class="service-chip__box">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="service-chip__label">Grafica & Stampa</span>
+                        </label>
+                        <label class="service-chip">
+                            <input type="checkbox" name="servizio" value="altro">
+                            <span class="service-chip__box">
+                                <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="service-chip__label">Altro</span>
+                        </label>
+                    </div>
+                </div>
+
+                
+                <div class="field reveal">
+                    <label for="budget">Budget indicativo</label>
+                    <div class="field-select-wrap">
+                        <select id="budget" name="budget">
+                            <option value="" disabled selected>Seleziona una fascia…</option>
+                            <option value="<500">Meno di 500€</option>
+                            <option value="500-1500">500€ – 1.500€</option>
+                            <option value="1500-3000">1.500€ – 3.000€</option>
+                            <option value="3000-6000">3.000€ – 6.000€</option>
+                            <option value="6000+">Oltre 6.000€</option>
+                            <option value="da-definire">Da definire insieme</option>
+                        </select>
+                    </div>
+                    <span class="field-hint">Non è vincolante — serve per capire meglio il progetto.</span>
+                </div>
+
+                
+                <div class="field reveal">
+                    <label for="msg">Parlami del tuo progetto *</label>
+                    <textarea
+                        id="msg"
+                        name="msg"
+                        placeholder="Descrivi il progetto, gli obiettivi, le tempistiche… più dettagli dai, meglio posso aiutarti."
+                        required
+                        maxlength="1000"
+                    ></textarea>
+                    <span class="field-hint" id="msg-counter">1000 caratteri rimanenti</span>
+                </div>
+
+                
+                <div class="form-footer reveal">
+                    <p class="form-privacy">
+                        I tuoi dati sono al sicuro.
+                        Consulta la <a href="/privacy-policy">Privacy Policy</a>.
+                    </p>
+                    <button type="submit" class="btn-submit">
+                        Invia messaggio
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </button>
+                </div>
+
+            </form>
+
+            
+            <div id="form-success" class="form-success">
+                <div class="success-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00c471" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <p class="success-title">Messaggio inviato!</p>
+                <p class="success-sub">
+                    Grazie per avermi scritto.<br>
+                    Ti rispondo entro 24 ore.
+                </p>
+            </div>
+        </div>
+
+        
+        <aside class="contact-info">
+
+            
+            <a href="mailto:TUAEMAIL@esempio.it" class="channel-card" style="animation:fadeUp .6s .1s var(--ease) both">
+                <div class="channel-icon ch-email">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0071E3" stroke-width="1.8">
+                        <rect x="2" y="4" width="20" height="16" rx="3"/>
+                        <polyline points="2,4 12,13 22,4"/>
+                    </svg>
+                </div>
+                <div class="channel-text">
+                    <div class="channel-name">Email</div>
+                    <div class="channel-handle">TUAEMAIL@esempio.it</div>
+                </div>
+                <svg class="channel-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </a>
+
+            <a href="https://wa.me/393934740930" target="_blank" rel="noopener" class="channel-card" style="animation:fadeUp .6s .2s var(--ease) both">
+                <div class="channel-icon ch-wa">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#00c471">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L.057 23.5l5.797-1.52A11.932 11.932 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.36-.213-3.44.902.918-3.354-.234-.373A9.807 9.807 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+                    </svg>
+                </div>
+                <div class="channel-text">
+                    <div class="channel-name">WhatsApp</div>
+                    <div class="channel-handle">Risposta rapida</div>
+                </div>
+                <svg class="channel-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </a>
+
+            <a href="https://instagram.com/_davstudios" target="_blank" rel="noopener" class="channel-card" style="animation:fadeUp .6s .3s var(--ease) both">
+                <div class="channel-icon ch-ig">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="1.8">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="#E1306C" stroke="none"/>
+                    </svg>
+                </div>
+                <div class="channel-text">
+                    <div class="channel-name">Instagram</div>
+                    <div class="channel-handle">@_davstudios</div>
+                </div>
+                <svg class="channel-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </a>
+
+            
+            <div class="info-block" style="animation:fadeUp .6s .4s var(--ease) both">
+                <p class="info-block__title">Orari di risposta</p>
+                <div class="schedule-row">
+                    <span class="schedule-day">Lunedì – Venerdì</span>
+                    <span class="schedule-time">9:00 – 18:00</span>
+                </div>
+                <div class="schedule-row">
+                    <span class="schedule-day">Sabato</span>
+                    <span class="schedule-time">10:00 – 13:00</span>
+                </div>
+                <div class="schedule-row">
+                    <span class="schedule-day">Domenica</span>
+                    <span class="schedule-closed">Chiuso</span>
+                </div>
+                <div class="tz-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+                    </svg>
+                    <span id="visitor-tz">Fuso orario: Europa/Roma</span>
+                </div>
+            </div>
+
+        </aside>
+
+    </section>
+
+    
+    <section class="contact-faq-strip">
+        <div class="contact-faq-strip__inner">
+            <div>
+                <span class="faq-header__label reveal">Prima di scrivere</span>
+                <h2 class="faq-header__title reveal delay-1">Domande<br>frequenti.</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <p class="faq-q">Quanto tempo ci vuole per rispondere?</p>
+                    <p class="faq-a">Rispondo sempre entro 24 ore nei giorni feriali. Per richieste urgenti puoi scrivermi direttamente su WhatsApp.</p>
+                </div>
+                <div class="faq-item reveal delay-1">
+                    <p class="faq-q">Lavori solo con aziende o anche con privati?</p>
+                    <p class="faq-a">Con entrambi. Che tu sia una startup, un'azienda consolidata o un professionista freelance, posso aiutarti.</p>
+                </div>
+                <div class="faq-item reveal delay-2">
+                    <p class="faq-q">È obbligatorio avere un budget definito?</p>
+                    <p class="faq-a">No, puoi selezionare "Da definire insieme". Nella prima call capiamo insieme le possibilità in base alle tue esigenze.</p>
+                </div>
+                <div class="faq-item reveal delay-3">
+                    <p class="faq-q">Come funziona la prima consulenza?</p>
+                    <p class="faq-a">È gratuita e senza impegno. Facciamo una call di 30 minuti per capire il progetto, dopodiché ti invio un preventivo dettagliato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="footer-logo-img"/>
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="#" class="nav-active">CONTATTAMI</a>
+            <a href="/privacy-policy">PRIVACY</a>
+            <a href="/cookie-policy">COOKIE</a>
+        </nav>
+        <div class="footer-copyright">
+            <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color:var(--ink);text-decoration:none">_davstudios</a> — Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>import '../../scripts/global.js';</script>
+    <script>import '../../scripts/contact.js';</script>
+
+</body>
+</html>

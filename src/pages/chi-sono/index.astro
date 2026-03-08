@@ -1,0 +1,360 @@
+---
+import '../../styles/global.css';
+import '../../styles/about.css';
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <title>Chi Sono — Portfolio</title>
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="nav-section nav-left">
+            <a href="/chi-sono" class="nav-active">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+        </div>
+        <div class="nav-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="nav-logo-img"/>
+            </a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer__inner">
+            <a href="/chi-sono" class="nav-active">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    
+    <section class="about-hero">
+        <div class="about-hero__text">
+            <p class="about-hero__label reveal">Chi sono</p>
+            <h1 class="about-hero__name" style="animation:fadeUp .75s .12s var(--ease) both">
+                David<br><span>Spano</span>
+            </h1>
+            <p class="about-hero__role reveal delay-2">
+                Designer · Sviluppatore · Creatore
+            </p>
+            <p class="about-hero__intro reveal delay-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation.
+            </p>
+            <div class="about-hero__cta reveal delay-3">
+                <a href="/progetti" class="btn-oval">Vedi i miei progetti</a>
+                <a href="#storia" class="about-scroll-hint">
+                    Scopri di più
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2.5"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="about-hero__photo reveal delay-2">
+            
+            <div class="about-photo-placeholder">
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                <span>La tua foto</span>
+            </div>
+            
+            <div class="photo-ring photo-ring--1"></div>
+            <div class="photo-ring photo-ring--2"></div>
+            <div class="photo-dot photo-dot--1"></div>
+            <div class="photo-dot photo-dot--2"></div>
+            <div class="photo-dot photo-dot--3"></div>
+        </div>
+    </section>
+
+    
+    <section class="stats-strip">
+        <div class="stats-strip__inner">
+            <div class="stat-item reveal">
+                <span class="stat-number count-up" data-count="47" data-suffix="+">0</span>
+                <span class="stat-label">Progetti completati</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal delay-1">
+                <span class="stat-number count-up" data-count="5" data-suffix=" anni">0</span>
+                <span class="stat-label">Di esperienza</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal delay-2">
+                <span class="stat-number count-up" data-count="99" data-suffix="%">0</span>
+                <span class="stat-label">Clienti soddisfatti</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item reveal delay-3">
+                <span class="stat-number count-up" data-count="6">0</span>
+                <span class="stat-label">Attestati ICDL</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="story-section" id="storia">
+        <div class="story-section__inner">
+
+            
+            <aside class="story-timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-node" data-year="2019">
+                    <div class="tnode-dot"></div>
+                    <div class="tnode-card reveal">
+                        <span class="tnode-year">2019</span>
+                        <p class="tnode-text">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="timeline-node" data-year="2021">
+                    <div class="tnode-dot"></div>
+                    <div class="tnode-card reveal delay-1">
+                        <span class="tnode-year">2021</span>
+                        <p class="tnode-text">Sed do eiusmod tempor incididunt ut labore.</p>
+                    </div>
+                </div>
+                <div class="timeline-node" data-year="2023">
+                    <div class="tnode-dot"></div>
+                    <div class="tnode-card reveal delay-2">
+                        <span class="tnode-year">2023</span>
+                        <p class="tnode-text">Ut enim ad minim veniam quis nostrud.</p>
+                    </div>
+                </div>
+                <div class="timeline-node" data-year="oggi">
+                    <div class="tnode-dot tnode-dot--active"></div>
+                    <div class="tnode-card reveal delay-3">
+                        <span class="tnode-year" style="color:var(--accent)">Oggi</span>
+                        <p class="tnode-text">Duis aute irure dolor in reprehenderit.</p>
+                    </div>
+                </div>
+            </aside>
+
+            
+            <div class="story-body">
+                <p class="section-label reveal">La mia storia</p>
+                <h2 class="section-title reveal delay-1">
+                    Da dove vengo,<br>dove sto andando.
+                </h2>
+                <div class="story-paragraphs">
+                    <p class="reveal delay-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p class="reveal delay-3">
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque
+                        ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section class="values-section">
+        <div class="values-section__inner">
+            <p class="section-label reveal" style="text-align:center">I miei valori</p>
+            <h2 class="section-title reveal delay-1" style="text-align:center">
+                Cosa guida ogni<br>mia scelta.
+            </h2>
+
+            <div class="values-grid">
+
+                <div class="value-card reveal">
+                    <div class="value-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="value-card__title">Qualità</h3>
+                    <p class="value-card__text">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua ut enim.
+                    </p>
+                </div>
+
+                <div class="value-card reveal delay-1">
+                    <div class="value-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="value-card__title">Velocità</h3>
+                    <p class="value-card__text">
+                        Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat duis aute irure dolor.
+                    </p>
+                </div>
+
+                <div class="value-card reveal delay-2">
+                    <div class="value-card__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="value-card__title">Empatia</h3>
+                    <p class="value-card__text">
+                        Excepteur sint occaecat cupidatat non proident sunt in culpa qui
+                        officia deserunt mollit anim id est laborum perspiciatis.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="skills-section">
+        <div class="skills-section__inner">
+
+            <div class="skills-text">
+                <p class="section-label reveal">Le mie competenze</p>
+                <h2 class="section-title reveal delay-1">
+                    Strumenti e<br>linguaggi che uso.
+                </h2>
+                <p class="skills-desc reveal delay-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div class="skills-bars">
+                <div class="skill-bar reveal">
+                    <div class="skill-bar__header">
+                        <span class="skill-bar__name">Design UI/UX</span>
+                        <span class="skill-bar__pct">95%</span>
+                    </div>
+                    <div class="skill-bar__track">
+                        <div class="skill-bar__fill" data-width="95"></div>
+                    </div>
+                </div>
+                <div class="skill-bar reveal delay-1">
+                    <div class="skill-bar__header">
+                        <span class="skill-bar__name">Sviluppo Frontend</span>
+                        <span class="skill-bar__pct">88%</span>
+                    </div>
+                    <div class="skill-bar__track">
+                        <div class="skill-bar__fill" data-width="88"></div>
+                    </div>
+                </div>
+                <div class="skill-bar reveal delay-2">
+                    <div class="skill-bar__header">
+                        <span class="skill-bar__name">Branding</span>
+                        <span class="skill-bar__pct">92%</span>
+                    </div>
+                    <div class="skill-bar__track">
+                        <div class="skill-bar__fill" data-width="92"></div>
+                    </div>
+                </div>
+                <div class="skill-bar reveal delay-3">
+                    <div class="skill-bar__header">
+                        <span class="skill-bar__name">Motion Design</span>
+                        <span class="skill-bar__pct">75%</span>
+                    </div>
+                    <div class="skill-bar__track">
+                        <div class="skill-bar__fill" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-bar reveal delay-3">
+                    <div class="skill-bar__header">
+                        <span class="skill-bar__name">Strategia Digitale</span>
+                        <span class="skill-bar__pct">83%</span>
+                    </div>
+                    <div class="skill-bar__track">
+                        <div class="skill-bar__fill" data-width="83"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section class="quote-section">
+        <div class="quote-section__inner reveal">
+            <svg class="quote-mark" viewBox="0 0 60 48" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48V29.538C0 12.923 9.231 3.692 27.692 0L30.462 4.615C22.154 6.769
+                         17.077 11.385 15.231 18.462H24V48H0ZM36 48V29.538C36 12.923 45.231 3.692
+                         63.692 0L66.462 4.615C58.154 6.769 53.077 11.385 51.231 18.462H60V48H36Z"
+                      fill="currentColor" opacity=".15"/>
+            </svg>
+            <blockquote class="quote-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation.
+            </blockquote>
+            <cite class="quote-author">— Il tuo nome, anno</cite>
+        </div>
+    </section>
+
+    
+    <section class="about-cta">
+        <div class="about-cta__inner reveal">
+            <h2 class="about-cta__title">Lavoriamo insieme?</h2>
+            <p class="about-cta__sub">
+                Racconta il tuo progetto — rispondo entro 24 ore.
+            </p>
+            <a href="/contattami" class="btn-oval">Scrivimi ora</a>
+        </div>
+    </section>
+
+    
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="/">
+				<img src="/assets/_davstudios.svg" alt="Il tuo nome" class="footer-logo-img"/>
+			</a>
+        </div>
+        <nav class="footer-nav">
+            <a href="#" class="nav-active">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="/contattami">CONTATTAMI</a>
+            <a href="/privacy-policy">PRIVACY</a>
+            <a href="/cookie-policy">COOKIE</a>
+        </nav>
+        <div class="footer-copyright">
+            <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color: var(--ink); text-decoration: none">_davstudios</a> — Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>import '../../scripts/global.js'; '../../scripts/about.js'</script>
+
+</body>
+</html>
