@@ -1,7 +1,6 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://davstudios.it',
+  site: 'https://d4vgfx.github.io',
+  base: '/_davstudios',
 });
