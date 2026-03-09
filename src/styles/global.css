@@ -39,6 +39,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+b {
+    font-weight: 600;
+}
+
 .step-item {
             display: flex;
             flex-direction: column;
