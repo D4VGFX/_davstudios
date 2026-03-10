@@ -39,6 +39,30 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Scrollbar personalizzata */
+html {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--accent) transparent; /* Firefox: thumb track */
+}
+
+/* Chrome/Safari/Edge */
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: var(--r-pill);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
 b {
     font-weight: 600;
 }
