@@ -222,7 +222,6 @@ b {
 .content-block {
     flex: 1;
     max-width: 520px;
-    min-height: 300px;
     border-radius: var(--r-xl);
     background: var(--surface);
     border: 1px solid var(--line);
