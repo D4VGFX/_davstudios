@@ -6,82 +6,28 @@ const hasMouse = () => window.matchMedia('(pointer: fine)').matches;
 const lerp     = (a, b, t) => a + (b - a) * t;
 
 function initSkillBars() {
-    const fills = document.querySelectorAll('.skill-bar__fill');
-    if (!fills.length) return;
+    const bars = document.querySelectorAll('.skill-bar');
+    if (!bars.length) return;
 
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    const target = entry.target;
-                    const width  = target.dataset.width || '0';
-                    setTimeout(() => {
-                        target.style.width = width + '%';
-                    }, 200);
-                    observer.unobserve(target);
+                    const fill = entry.target.querySelector('.skill-bar__fill');
+                    if (fill) {
+                        const width = fill.dataset.width || '0';
+                        setTimeout(() => {
+                            fill.style.width = width + '%';
+                        }, 200);
+                    }
+                    observer.unobserve(entry.target);
                 }
             });
         },
         { threshold: 0.3 }
     );
 
-    fills.forEach((f) => observer.observe(f));
-}
-
-function initTyped() {
-    const el = document.querySelector('.about-hero__role');
-    if (!el) return;
-    const phrases = [
-        'Designer · Sviluppatore · Creatore',
-        'UI/UX Designer',
-        'Frontend Developer',
-        'Brand Strategist',
-    ];
-
-    let phraseIndex = 0;
-    let charIndex   = 0;
-    let isDeleting  = false;
-    let isPaused    = false;
-
-    const TYPING_SPEED  = 60;
-    const DELETE_SPEED  = 30;
-    const PAUSE_END     = 2200;
-    const PAUSE_START   = 300;
-
-    function tick() {
-        const current = phrases[phraseIndex];
-
-        if (isPaused) return;
-
-        if (!isDeleting) {
-            el.textContent = current.slice(0, ++charIndex);
-            if (charIndex === current.length) {
-                isPaused = true;
-                setTimeout(() => { isDeleting = true; isPaused = false; tick(); }, PAUSE_END);
-                return;
-            }
-        } else {
-            el.textContent = current.slice(0, --charIndex);
-            if (charIndex === 0) {
-                isDeleting  = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                isPaused    = true;
-                setTimeout(() => { isPaused = false; tick(); }, PAUSE_START);
-                return;
-            }
-        }
-
-        setTimeout(tick, isDeleting ? DELETE_SPEED : TYPING_SPEED);
-    }
-    el.style.borderRight = '2px solid var(--accent)';
-    el.style.paddingRight = '2px';
-    setInterval(() => {
-        el.style.borderRightColor =
-            el.style.borderRightColor === 'transparent'
-                ? 'var(--accent)'
-                : 'transparent';
-    }, 530);
-    setTimeout(tick, 1400);
+    bars.forEach((b) => observer.observe(b));
 }
 
 function initTiltCards() {

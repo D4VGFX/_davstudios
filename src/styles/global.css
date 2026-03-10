@@ -39,29 +39,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Scrollbar personalizzata */
-html {
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: var(--accent) transparent; /* Firefox: thumb track */
-}
-
-/* Chrome/Safari/Edge */
-html::-webkit-scrollbar {
-    width: 6px;
-}
-
-html::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: var(--r-pill);
-}
-
-html::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-hover);
-}
+html { scrollbar-width: thin; scrollbar-color: var(--accent) var(--bg); }
+html::-webkit-scrollbar { width: 6px; }
+html::-webkit-scrollbar-track { background: var(--bg); }
+html::-webkit-scrollbar-thumb { background: var(--accent); border-radius: var(--r-pill); }
+html::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
 
 b {
     font-weight: 600;
@@ -323,7 +305,7 @@ b {
     box-shadow: 0 8px 24px rgba(0,113,227,.3);
 }
 
-.dots { display:flex; gap:4px; align-items:center; }
+.dots { display: flex; gap: 4px; align-items: center; align-self: center; margin-bottom: 28px; }
 .dots span {
     width:4px; height:4px;
     border-radius:50%;
@@ -426,14 +408,14 @@ b {
     font-family: var(--font);
     font-weight:600; font-size:14px; letter-spacing:-.1px;
     color:#fff; border:none; cursor:pointer;
-    position:relative; overflow:hidden;
+    position:relative; overflow:visible;
     transition: transform .25s var(--ease-spring), box-shadow .25s;
 }
 .btn-rect::before {
     content:''; position:absolute; inset:0;
     background:rgba(255,255,255,.15); opacity:0; transition:opacity .2s;
 }
-.btn-rect:hover { transform: translateY(-3px) scale(1.02); }
+.btn-rect:hover { box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 .btn-rect:hover::before { opacity:1; }
 
 .btn-rect.btn-wa    { background:linear-gradient(135deg,#25D366,#128C7E);
@@ -635,9 +617,9 @@ b {
     .process-section { padding: 72px 20px; }
     .process-header h2 { font-size: clamp(32px, 9vw, 44px); letter-spacing: -1.5px; }
     .process-header p { font-size: 15px; }
-    .steps-container { gap: 6px; flex-wrap: wrap; justify-content: center; }
+    .steps-container { flex-direction: column; align-items: center; gap: 8px; }
     .circle { width: 44px; height: 44px; font-size: 15px; }
-    .dots { gap: 3px; }
+    .dots { gap: 3px; flex-direction: column; margin-bottom: 0; }
     .step-label { font-size: 9px; letter-spacing: .5px; }
     .main-text-block { padding: 28px 20px; font-size: 15px; }
 
