@@ -63,6 +63,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   rows.forEach(function (row) {
     row.addEventListener('mouseenter', function () {
+      var imgSrc = row.getAttribute('data-img');
+      preview.innerHTML = '';
+      if (imgSrc) {
+        var img = document.createElement('img');
+        img.src = imgSrc;
+        img.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:18px;';
+        preview.appendChild(img);
+      }
       preview.classList.add('show');
     });
     row.addEventListener('mouseleave', function () {
@@ -73,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
   function fillPanel(row) {
     var cat   = row.getAttribute('data-category');
-    var label = cat === 'graphic' ? 'Graphic Design' : 'Web Developing';
+    var label = cat === 'graphic' ? 'Graphic Design' : 'Web Development';
 
     document.getElementById('panel-cat').textContent   = label;
     document.getElementById('panel-title').textContent = row.getAttribute('data-title') || '';
