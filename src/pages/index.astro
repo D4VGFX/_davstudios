@@ -1,29 +1,9 @@
 ---
 import '../styles/global.css';
-import fs from 'node:fs';
-import path from 'node:path';
+import featured from '../../public/assets/featured.json';
 
-function getLatestImage(dir: string) {
-    const fullPath = path.join(process.cwd(), 'public', dir);
-    if (!fs.existsSync(fullPath)) return null;
-
-    const files = fs.readdirSync(fullPath);
-    const images = files.filter(file => /\.(jpg|jpeg|png|webp|avif|svg)$/i.test(file));
-
-    if (images.length === 0) return null;
-
-    const latest = images
-        .map(file => ({
-            file,
-            mtime: fs.statSync(path.join(fullPath, file)).mtimeMs
-        }))
-        .sort((a, b) => b.mtime - a.mtime)[0];
-
-    return `/${dir}/${latest.file}`;
-}
-
-const latestGraphic = getLatestImage('assets/graphic_design');
-const latestWeb = getLatestImage('assets/web_development');
+const latestGraphic = featured.graphic;
+const latestWeb = featured.web;
 ---
 
 <!DOCTYPE html>
