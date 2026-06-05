@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+# Forza l'ambiente di GitHub a far girare TUTTI i plugin su Node 24, mutando il warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -24,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22 # Questa è la versione per il tuo codice Astro (perfetta così)
           cache: npm
 
       - name: Install dependencies
@@ -36,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./dist # <-- Forza GitHub a cercare la cartella generata da Astro
+          path: ./dist # Specifica la cartella corretta di Astro
 
   deploy:
     needs: build
