@@ -10,10 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-# Questa è la riga aggiunta per risolvere l'avviso su Node 20 nelle Actions
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -28,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22 # Mantieni 22 per Astro, va benissimo
           cache: npm
 
       - name: Install dependencies
@@ -38,9 +34,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+        uses: actions/upload-pages-artifact@v5 # Aggiornato a v5 per Node 24
 
   deploy:
     needs: build
@@ -51,4 +45,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # Gestisce internamente il runtime aggiornato
