@@ -1,0 +1,434 @@
+---
+import '../../../styles/global.css';
+import '../../../styles/fontshop.css';
+
+const font = {
+    name: 'NexoraSans',
+    slug: 'nexora-sans',
+    style: 'Sans-Serif · Geometrico',
+    tagline: 'Pulito. Moderno. Riconoscibile.',
+    description: 'NexoraSans è un sans-serif geometrico ispirato alla pulizia delle forme circolari e alla fluidità del segno contemporaneo, reinterpretata con un\'energia fresca e distintiva. I suoi glifi arrotondati e la struttura bilanciata creano un carattere di grande leggibilità e calore visivo, perfetto per branding digitale, interfacce moderne e qualsiasi progetto che richieda un\'estetica pulita, accessibile e riconoscibile.',
+    weights: ['Regular', 'Italic', 'Medium', 'Medium Italic', 'SemiBold', 'SemiBold Italic'],
+    licenses: [
+        {
+            id: 'personal',
+            name: 'Personal',
+            price: 24.99,
+            desc: 'Mirata a studenti, hobbisti, creativi e privati, e quindi ideale per progetti personali, uso domestico e non commerciali.',
+            includes: ['Uso personale e privato', 'Stampa personale come biglietti, inviti e uso domestico', 'Portfolio personale non monetizzato', 'Sito web personale non commerciale', 'Progetti scolastici e accademici', 'Social media personali senza sponsorizzazioni'],
+            excludes: ['Qualsiasi uso commerciale o che generi profitto', 'Logo, branding o identità visiva aziendale', 'Materiali pubblicitari o promozionali', 'Prodotti fisici o digitali in vendita', 'App, software o prodotti SaaS', 'Produzioni video, broadcast o streaming', 'Sublicenza o ridistribuzione del font'],
+            badge: null,
+        },
+        {
+            id: 'commercial',
+            name: 'Commercial',
+            price: 59.99,
+            desc: 'Mirata a designer freelance, studi creativi e agenzie che lavorano su progetti commerciali per clienti, ma con un uso limitato a 1 sito web e senza prodotti fisici in vendita.',
+            includes: ['Tutti gli usi previsti dalla licenza Personal', 'Progetti commerciali per clienti', 'Creazione di logo, branding e identità visiva', 'Materiali pubblicitari e promozionali', 'Stampa commerciale come brochure, packaging e manifesti', '1 sito web commerciale', 'Presentazioni aziendali', 'Social media commerciali'],
+            excludes: ['Più di 1 sito web', 'Prodotti fisici in vendita o merchandising', 'App mobile, software o prodotti SaaS', 'Produzioni video, broadcast o streaming', 'Sublicenza o ridistribuzione del font'],
+            badge: 'Più popolare',
+        },
+        {
+            id: 'extended',
+            name: 'Extended',
+            price: 109.99,
+            desc: 'Mirata per brand, e-commerce e aziende commerciali che necessitano di una licenza più ampia per usi multipli e progetti più grandi.',
+            includes: ['Tutti gli usi previsti dalla licenza Commercial', 'Prodotti fisici in vendita come abbigliamento, oggettistica e stampe', 'Merchandising e prodotti brandizzati', 'Packaging di prodotti commerciali', 'Utilizzo su un massimo di 5 siti web', 'E-commerce e negozi online', 'Materiali POS (Point of Sale) e display'],
+            excludes: ['Più di 5 siti web', 'App mobile, software o prodotti SaaS', 'Produzioni video, broadcast o streaming', 'Sublicenza o ridistribuzione del font'],
+            badge: null,
+        },
+        {
+            id: 'saas',
+            name: 'SaaS / App',
+            price: 249.99,
+            desc: 'Mirata a sviluppatori, startup e team di sviluppo software (fino a 5 persone) che creano applicazioni, software, prodotti SaaS o piattaforme web con un uso illimitato di siti web e progetti digitali.',
+            includes: ['Tutti gli usi previsti dalla licenza Extended', 'Applicazioni mobile iOS e Android', 'Software desktop per Windows, macOS e Linux', 'Prodotti SaaS e piattaforme web', 'Plugin, estensioni e componenti software', 'Numero illimitato di siti web', 'Template e temi digitali in vendita'],
+            excludes: ['Produzioni video, broadcast o streaming', 'Ridistribuzione del font come file standalone', 'Sublicenza del font a terzi'],
+            badge: null,
+        },
+        {
+            id: 'broadcast',
+            name: 'Broadcast',
+            price: 299.99,
+            desc: 'Mirata a video-maker, case di produzione cinematografica, agenzie media e canali di streaming (team fino a 10 persone) che necessitano di una licenza per produzioni video, broadcast e media digitali con un uso illimitato di siti web e progetti digitali.',
+            includes: ['Tutti gli usi previsti dalla licenza SaaS/App', 'Video commerciali e spot pubblicitari', 'Trasmissioni televisive e radiofoniche', 'Contenuti in streaming online su piattaforme come YouTube, Vimeo, Netflix, ecc', 'Motion graphics e animazioni', 'Film, documentari e produzioni cinematografiche', 'Creazione di contenuti per social media con monetizzazione'],
+            excludes: ['Ridistribuzione del font come file standalone', 'Sublicenza del font a terzi'],
+            badge: null,
+        },
+        {
+            id: 'enterprise',
+            name: 'Enterprise',
+            price: 599.99,
+            desc: 'Mirata a grandi aziende, multinazionali, agenzie globali e organizzazioni complesse che necessitano di una licenza completa e flessibile per un uso illimitato in progetti digitali, broadcast, media, stampa e più sedi.',
+            includes: ['Tutti gli usi previsti da ciascuna delle licenze precedenti', 'Numero illimitato di utenti interni alla organizzazione', 'Numero illimitato di siti web', 'Applicazioni, software e prodotti SaaS senza alcun limite', 'Produzioni broadcast, cinematografiche e video senza limiti', 'Utilizzo libero in più sedi e filiali aziendali', 'Supporto prioritario diretto'],
+            excludes: ['Ridistribuzione del font come prodotto standalone', 'Sublicenza del font a soggetti terzi ed esterni alla organizzazione'],
+            badge: 'Completo',
+        },
+    ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script is:inline src="https://app.termly.io/resource-blocker/bc13f957-c21f-4ed9-ba27-fc67ff4d7baa?autoBlock=on"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>NexoraSans — Font Sans-Serif Geometrico | _davstudios FontShop</title>
+    <meta name="description" content="NexoraSans è un sans-serif geometrico dai glifi arrotondati e dalla struttura bilanciata, perfetto per branding digitale e interfacce moderne. Disponibile con 6 livelli di licenza da €24,99.">
+    <meta name="author" content="David Spano">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://davstudios.it/fontshop/nexora-sans/">
+
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://davstudios.it/fontshop/nexora-sans/">
+    <meta property="og:title" content="NexoraSans — Font Sans-Serif | _davstudios">
+    <meta property="og:description" content="Sans-serif geometrico con glifi arrotondati. 6 licenze disponibili da €24,99.">
+    <meta property="og:image" content="https://davstudios.it/assets/og-image.jpg">
+    <meta property="og:site_name" content="_davstudios">
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0071E3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S58P45NFC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S58P45NFC2');
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "NexoraSans Font",
+      "description": "Sans-serif geometrico con glifi arrotondati e struttura bilanciata. Perfetto per branding digitale, interfacce moderne e progetti con un'estetica pulita e riconoscibile.",
+      "brand": { "@type": "Brand", "name": "_davstudios" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "24.99",
+        "highPrice": "599.99",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://davstudios.it/" },
+        { "@type": "ListItem", "position": 2, "name": "FontShop", "item": "https://davstudios.it/fontshop/" },
+        { "@type": "ListItem", "position": 3, "name": "NexoraSans", "item": "https://davstudios.it/fontshop/nexora-sans/" }
+      ]
+    }
+    </script>
+</head>
+<body class="fd-font--nexora-sans">
+
+    <nav class="navbar">
+        <div class="nav-section nav-left">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+        </div>
+        <div class="nav-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="nav-logo-img"/>
+            </a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="/fontshop" class="nav-active">FONTSHOP</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer__inner">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/fontshop" class="nav-active">FONTSHOP</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <!-- BREADCRUMB -->
+    <div class="fd-breadcrumb">
+        <div class="fd-breadcrumb__inner">
+            <a href="/fontshop">FontShop</a>
+            <span aria-hidden="true">›</span>
+            <span>{font.name}</span>
+        </div>
+    </div>
+
+    <!-- HERO FONT -->
+    <header class="fd-hero">
+        <div class="fd-hero__inner">
+
+            <div class="fd-hero__info">
+                <p class="fd-hero__style reveal">{font.style}</p>
+                <h1 class="fd-hero__name reveal delay-1">{font.name}</h1>
+                <p class="fd-hero__tagline reveal delay-2">{font.tagline}</p>
+                <p class="fd-hero__desc reveal delay-2">{font.description}</p>
+
+                <div class="fd-hero__weights reveal delay-3">
+                    {font.weights.map((w) => (
+                        <span class="fd-weight-chip">{w}</span>
+                    ))}
+                </div>
+
+                <div class="fd-hero__actions reveal delay-3">
+                    <a href="#licenze" class="btn-oval">Acquista licenza</a>
+                    <a href="#specimen" class="fd-btn-ghost">Vedi specimen ↓</a>
+                </div>
+            </div>
+
+            <!-- Carosello immagini -->
+            <div class="fs-carousel-wrapper reveal delay-1">
+
+                <button class="fs-carousel-btn prev" aria-label="Immagine precedente">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+
+                <div class="fs-carousel" id="fontCarousel">
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide1.png" alt="Presentazione NexoraSans 1" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide2.png" alt="Presentazione NexoraSans 2" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide3.png" alt="Presentazione NexoraSans 3" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide4.png" alt="Presentazione NexoraSans 4" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide5.png" alt="Presentazione NexoraSans 5" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide6.png" alt="Presentazione NexoraSans 6" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide7.png" alt="Presentazione NexoraSans 7" class="fs-carousel-img" />
+                    <img src="/assets/fonts/nexora-sans/nexora-sans-slide8.png" alt="Presentazione NexoraSans 8" class="fs-carousel-img" />
+                </div>
+
+                <button class="fs-carousel-btn next" aria-label="Immagine successiva">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- SPECIMEN COMPLETO -->
+    <section class="fd-specimen" id="specimen">
+        <div class="fd-specimen__inner">
+            <p class="section-label reveal">Specimen</p>
+            <h2 class="section-title reveal delay-1">Il carattere in azione.</h2>
+
+            <div class="fd-specimen__preview reveal delay-2">
+                <div class="fd-weights-showcase">
+                    <div class="fd-weight-row">
+                        <span class="fd-weight-label">Regular 400</span>
+                        <span class="fd-preview-weight--nexora-regular">NexoraSans — The quick brown fox jumps over the lazy dog</span>
+                    </div>
+                    <div class="fd-weight-row">
+                        <span class="fd-weight-label">Regular Italic</span>
+                        <span class="fd-preview-weight fd-preview-weight--nexora-regular-italic">NexoraSans — The quick brown fox jumps over the lazy dog</span>
+                    </div>
+                    <div class="fd-weight-row">
+                        <span class="fd-weight-label">Medium 500</span>
+                        <span class="fd-preview-weight fd-preview-weight--nexora-medium">NexoraSans — The quick brown fox jumps over the lazy dog</span>
+                    </div>
+                    <div class="fd-weight-row">
+                        <span class="fd-weight-label">Medium Italic</span>
+                        <span class="fd-preview-weight fd-preview-weight--nexora-medium-italic">NexoraSans — The quick brown fox jumps over the lazy dog</span>
+                    </div>
+                    <div class="fd-weight-row">
+                        <span class="fd-weight-label">SemiBold 600</span>
+                        <span class="fd-preview-weight fd-preview-weight--nexora-semibold">NexoraSans — The quick brown fox jumps over the lazy dog</span>
+                    </div>
+                    <div class="fd-weight-row">
+                        <span class="fd-weight-label">SemiBold Italic</span>
+                        <span class="fd-preview-weight fd-preview-weight--nexora-semibold-italic">NexoraSans — The quick brown fox jumps over the lazy dog</span>
+                    </div>
+                </div>
+                <div class="fd-preview-size fd-preview-size--sm">
+                    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                    a b c d e f g h i j k l m n o p q r s t u v w x y z<br>
+                    . : ; , ! ? ¡ ¿ - + _ / | \ * £ $ € ° ' " ' ' " "<br>
+                    À Á Æ È É Ì Í Ò Ó Œ Ù Ú<br>
+                    à á æ è é ì í ò ó œ ù ú<br>
+                    &lt; &gt; % & ( ) = [ ] &#123; &#125; ^ Ç ç @ # §<br>
+                    1 2 3 4 5 6 7 8 9 0<br>
+                </div>
+            </div>
+
+            <!-- Tester interattivo -->
+            <div class="fd-tester reveal">
+                <div class="fd-tester__header">
+                    <span class="fd-tester__label">Prova il font</span>
+                    <div class="fd-tester__controls">
+                        <label for="size-range">Dimensione: <span id="size-val">48</span>px</label>
+                        <input type="range" id="size-range" min="20" max="120" value="48" class="fd-range">
+                    </div>
+                </div>
+                <div
+                    class="fd-tester__area"
+                    id="tester-area"
+                    contenteditable="true"
+                    spellcheck="false"
+                    data-placeholder="Scrivi qui per provare NexoraSans…"
+                >Scrivi qui per provare NexoraSans…</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABELLA LICENZE -->
+    <section class="fd-licenses" id="licenze">
+        <div class="fd-licenses__inner">
+            <p class="section-label reveal">Licenze</p>
+            <h2 class="section-title reveal delay-1">Scegli la tua licenza.</h2>
+            <p class="fd-licenses__sub reveal delay-2">Ogni licenza include il font in formato OTF, TTF, WOFF2 e WOFF + PDF di licenza firmato.</p>
+
+            <div class="fd-licenses__grid">
+                {font.licenses.map((lic, i) => (
+                    <div class={`fd-lic-card reveal${i % 3 !== 0 ? ' delay-' + (i % 3) : ''}${lic.badge === 'Più popolare' ? ' fd-lic-card--featured' : ''}`}
+                         data-license={lic.id}
+                         data-price={lic.price}
+                         data-name={lic.name}>
+                        {lic.badge && <span class="fd-lic-badge">{lic.badge}</span>}
+                        <div class="fd-lic-card__head">
+                            <h3 class="fd-lic-name">{lic.name}</h3>
+                            <div class="fd-lic-price">
+                                <span class="fd-lic-price__amount">€{lic.price.toFixed(2).replace('.', ',')}</span>
+                                <span class="fd-lic-price__once">una tantum</span>
+                            </div>
+                        </div>
+                        <p class="fd-lic-desc">{lic.desc}</p>
+                        <ul class="fd-lic-list">
+                            {lic.includes.map((item) => (
+                                <li class="fd-lic-list__item fd-lic-list__item--yes">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    {item}
+                                </li>
+                            ))}
+                            {lic.excludes.map((item) => (
+                                <li class="fd-lic-list__item fd-lic-list__item--no">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                        <button
+                            class={`fd-lic-btn${lic.badge === 'Più popolare' ? ' fd-lic-btn--featured' : ''}`}
+                            data-license={lic.id}
+                            data-font="nexora-sans"
+                            data-price={lic.price}
+                            data-name={`NexoraSans — ${lic.name}`}
+                        >
+                            Acquista — €{lic.price.toFixed(2).replace('.', ',')}
+                        </button>
+                    </div>
+                ))}
+            </div>
+
+            <!-- Nota licenza -->
+            <div class="fd-lic-note reveal">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p>Hai bisogno di una licenza personalizzata o di più sedi? <a href="/contattami">Contattami</a> per un preventivo su misura.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CHECKOUT -->
+    <div class="fd-modal-backdrop" id="checkout-backdrop" aria-hidden="true"></div>
+    <div class="fd-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="fd-modal__close" id="modal-close" aria-label="Chiudi">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="fd-modal__body">
+            <p class="fd-modal__label">Stai acquistando</p>
+            <h2 class="fd-modal__title" id="modal-title">NexoraSans — Commercial</h2>
+            <p class="fd-modal__price" id="modal-price">€59,99</p>
+
+            <div class="fd-modal__form">
+                <div class="fd-field">
+                    <label class="fd-field__label" for="buyer-name">Nome completo *</label>
+                    <input type="text" id="buyer-name" class="fd-field__input" placeholder="Mario Rossi" required>
+                </div>
+                <div class="fd-field">
+                    <label class="fd-field__label" for="buyer-email">Email *</label>
+                    <input type="email" id="buyer-email" class="fd-field__input" placeholder="mario@esempio.it" required>
+                    <span class="fd-field__hint">Il font verrà consegnato a questo indirizzo</span>
+                </div>
+                <div class="fd-field">
+                    <label class="fd-field__label" for="buyer-company">Azienda / Studio (opzionale)</label>
+                    <input type="text" id="buyer-company" class="fd-field__input" placeholder="Studio Rossi">
+                </div>
+
+                <div class="fd-modal__summary">
+                    <div class="fd-summary-row">
+                        <span id="summary-font">NexoraSans</span>
+                        <span id="summary-license">Commercial</span>
+                    </div>
+                    <div class="fd-summary-row fd-summary-row--total">
+                        <span>Totale</span>
+                        <span id="summary-price">€59,99</span>
+                    </div>
+                    <div class="fd-summary-row fd-summary-row--note">
+                        <span>Consegna immediata via email · Licenza PDF inclusa</span>
+                    </div>
+                </div>
+
+                <button class="fd-modal__submit btn-oval" id="btn-checkout">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Procedi al pagamento
+                </button>
+
+                <p class="fd-modal__stripe-note">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Pagamento sicuro gestito da Stripe
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO SHOP -->
+    <div class="fd-back-strip">
+        <div class="fd-back-strip__inner">
+            <a href="/fontshop" class="fd-back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                Torna al FontShop
+            </a>
+            <span class="fd-back-strip__font">NexoraSans — 6 licenze disponibili da €24,99</span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="footer-logo-img"/>
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/fontshop" class="nav-active">FONTSHOP</a>
+            <a href="/contattami">CONTATTAMI</a>
+            <a href="/privacy-policy">PRIVACY</a>
+            <a href="/cookie-policy">COOKIE</a>
+        </nav>
+        <div class="footer-copyright">
+            <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color:var(--ink);text-decoration:none">_davstudios</a> — Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <script>
+        import '../../../scripts/global.js';
+        import '../../../scripts/fontshop.js';
+        import '../../../scripts/announcement.js';
+    </script>
+
+</body>
+</html>

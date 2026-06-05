@@ -601,6 +601,90 @@ b {
 }
 .nav-overlay.is-open { opacity: 1; pointer-events: all; }
 
+/* ── FONTSHOP PROMO SECTION (homepage) ───────────────────── */
+.fontshop-promo-section {
+    background: var(--accent);
+    padding: 110px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fontshop-promo-section::before {
+    content: '';
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.08) 0%, transparent 70%);
+    top: 50%; right: -100px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.fontshop-promo__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.fontshop-promo__label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+    margin-bottom: 16px;
+}
+
+.fontshop-promo__title {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.fontshop-promo__sub {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: rgba(255,255,255,.65);
+    max-width: 480px;
+}
+
+.fontshop-promo__action {
+    flex-shrink: 0;
+}
+
+/* Variante bianca del btn-oval */
+.btn-oval--white {
+    background: #fff !important;
+    color: var(--accent) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15) !important;
+}
+
+.btn-oval--white:hover {
+    background: rgba(255,255,255,.92) !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,.2) !important;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .fontshop-promo-section { padding: 72px 20px; }
+    .fontshop-promo__inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+    .fontshop-promo__title { font-size: clamp(32px, 9vw, 44px); letter-spacing: -1.5px; }
+    .fontshop-promo__sub { font-size: 15px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .fontshop-promo-section { padding: 88px 32px; }
+    .fontshop-promo__inner { gap: 40px; }
+    .fontshop-promo__title { font-size: 42px; }
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE — BASE MOBILE (max 767px)

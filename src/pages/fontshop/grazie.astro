@@ -1,0 +1,247 @@
+---
+import '../../styles/global.css';
+import '../../styles/fontshop.css';
+---
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazie per il tuo acquisto | _davstudios FontShop</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0071E3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S58P45NFC2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-S58P45NFC2');
+    </script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-section nav-left">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+        </div>
+        <div class="nav-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="nav-logo-img"/>
+            </a>
+        </div>
+        <div class="nav-section nav-right">
+            <a href="/fontshop" class="nav-active">FONTSHOP</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+        <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+        <div class="nav-drawer__inner">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="/fontshop" class="nav-active">FONTSHOP</a>
+            <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <section class="fs-thanks">
+        <div class="fs-thanks__inner">
+
+            <div class="fs-thanks__icon">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+
+            <p class="fs-thanks__label">Acquisto completato</p>
+            <h1 class="fs-thanks__title">Ottimo!<br><span>Il font è in arrivo.</span></h1>
+            <p class="fs-thanks__sub">
+                Controlla la tua casella email — trovi il font con la licenza PDF
+                allegata. Se non lo vedi entro qualche minuto, controlla la cartella spam.
+            </p>
+
+            <div class="fs-thanks__actions">
+                <a href="/fontshop" class="btn-oval">Torna al FontShop</a>
+                <a href="/" class="fd-btn-ghost">Vai alla home →</a>
+            </div>
+
+            <div class="fs-thanks__note">
+                <p>Problemi con la ricezione? <a href="/contattami">Contattami</a> e risolvo subito.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="/assets/_davstudios.svg" alt="_davstudios" class="footer-logo-img"/>
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <a href="/chi-sono">CHI SONO</a>
+            <a href="/progetti">PROGETTI</a>
+            <a href="/processo">PROCESSO</a>
+            <a href="/fontshop" class="nav-active">FONTSHOP</a>
+            <a href="/contattami">CONTATTAMI</a>
+            <a href="/privacy-policy">PRIVACY</a>
+            <a href="/cookie-policy">COOKIE</a>
+        </nav>
+        <div class="footer-copyright">
+            <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color:var(--ink);text-decoration:none">_davstudios</a> — Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <style>
+        .fs-thanks {
+            min-height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 40px;
+            background: var(--bg);
+        }
+
+        .fs-thanks__inner {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp .8s var(--ease) both;
+        }
+
+        .fs-thanks__icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: rgba(52,199,89,.1);
+            border: 1px solid rgba(52,199,89,.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            color: #34c759;
+            flex-shrink: 0;
+            animation: fadeUp .6s .1s var(--ease) both;
+        }
+
+        .fs-thanks__label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #34c759;
+            margin-bottom: 16px;
+        }
+
+        .fs-thanks__title {
+            font-size: 64px;
+            font-weight: 700;
+            letter-spacing: -2.5px;
+            line-height: 1.05;
+            color: var(--ink);
+            margin-bottom: 24px;
+        }
+
+        .fs-thanks__title span {
+            color: var(--accent);
+        }
+
+        .fs-thanks__sub {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.75;
+            color: var(--ink-soft);
+            margin-bottom: 44px;
+            max-width: 440px;
+        }
+
+        .fs-thanks__actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        /* Forza il btn-oval a non espandersi a tutta larghezza */
+        .fs-thanks__actions .btn-oval {
+            width: auto !important;
+            flex-shrink: 0;
+        }
+
+        .fs-thanks__note {
+            width: 100%;
+            padding: 20px 28px;
+            background: var(--surface-2);
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--ink-soft);
+        }
+
+        .fs-thanks__note a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Ghost button coerente con il resto della pagina */
+        .fs-thanks__actions .fd-btn-ghost {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            text-decoration: none;
+            transition: color .2s;
+            white-space: nowrap;
+        }
+
+        .fs-thanks__actions .fd-btn-ghost:hover {
+            color: var(--ink);
+        }
+
+        @media (max-width: 767px) {
+            .fs-thanks {
+                padding: 60px 20px;
+                align-items: flex-start;
+            }
+            .fs-thanks__inner {
+                margin: 0 auto;
+            }
+            .fs-thanks__title {
+                font-size: clamp(36px, 10vw, 52px);
+                letter-spacing: -1.5px;
+            }
+            .fs-thanks__actions {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+            .fs-thanks__actions .btn-oval {
+                width: auto !important;
+            }
+        }
+    </style>
+
+    <script>
+        import '../../scripts/global.js';
+    </script>
+
+</body>
+</html>
