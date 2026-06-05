@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22 # Mantieni 22 per Astro, va benissimo
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -34,7 +34,9 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5 # Aggiornato a v5 per Node 24
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./dist # <-- Forza GitHub a cercare la cartella generata da Astro
 
   deploy:
     needs: build
@@ -45,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # Gestisce internamente il runtime aggiornato
+        uses: actions/deploy-pages@v4
