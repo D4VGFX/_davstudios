@@ -28,7 +28,7 @@ import '../../styles/fontshop.css';
     <nav class="navbar">
         <div class="nav-section nav-left">
             <a href="/chi-sono">CHI SONO</a>
-            <a href="/progetti">PROGETTI</a>
+            <a href="/p&p">P&amp;P</a>
         </div>
         <div class="nav-logo">
             <a href="/">
@@ -46,8 +46,7 @@ import '../../styles/fontshop.css';
     <div class="nav-drawer" id="nav-drawer">
         <div class="nav-drawer__inner">
             <a href="/chi-sono">CHI SONO</a>
-            <a href="/progetti">PROGETTI</a>
-            <a href="/processo">PROCESSO</a>
+            <a href="/p&p">P&amp;P</a>
             <a href="/fontshop" class="nav-active">FONTSHOP</a>
             <a href="/contattami" class="btn-contattami">CONTATTAMI</a>
         </div>
@@ -91,12 +90,10 @@ import '../../styles/fontshop.css';
         </div>
         <nav class="footer-nav">
             <a href="/chi-sono">CHI SONO</a>
-            <a href="/progetti">PROGETTI</a>
-            <a href="/processo">PROCESSO</a>
+            <a href="/p&p">P&amp;P</a>
             <a href="/fontshop" class="nav-active">FONTSHOP</a>
             <a href="/contattami">CONTATTAMI</a>
-            <a href="/privacy-policy">PRIVACY</a>
-            <a href="/cookie-policy">COOKIE</a>
+            <a href="/policies">POLICIES</a>
         </nav>
         <div class="footer-copyright">
             <p>© 2026 <a href="https://www.instagram.com/_davstudios/" style="color:var(--ink);text-decoration:none">_davstudios</a> — Tutti i diritti riservati</p>
@@ -112,32 +109,21 @@ import '../../styles/fontshop.css';
             padding: 80px 40px;
             background: var(--bg);
         }
-
         .fs-thanks__inner {
             max-width: 560px;
-            width: 100%;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             animation: fadeUp .8s var(--ease) both;
         }
-
         .fs-thanks__icon {
-            width: 88px;
-            height: 88px;
+            width: 88px; height: 88px;
             border-radius: 50%;
             background: rgba(52,199,89,.1);
             border: 1px solid rgba(52,199,89,.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin: 0 auto 32px;
             color: #34c759;
-            flex-shrink: 0;
             animation: fadeUp .6s .1s var(--ease) both;
         }
-
         .fs-thanks__label {
             font-size: 11px;
             font-weight: 700;
@@ -146,7 +132,6 @@ import '../../styles/fontshop.css';
             color: #34c759;
             margin-bottom: 16px;
         }
-
         .fs-thanks__title {
             font-size: 64px;
             font-weight: 700;
@@ -155,38 +140,23 @@ import '../../styles/fontshop.css';
             color: var(--ink);
             margin-bottom: 24px;
         }
-
-        .fs-thanks__title span {
-            color: var(--accent);
-        }
-
+        .fs-thanks__title span { color: var(--accent); }
         .fs-thanks__sub {
             font-size: 17px;
             font-weight: 300;
             line-height: 1.75;
             color: var(--ink-soft);
             margin-bottom: 44px;
-            max-width: 440px;
         }
-
         .fs-thanks__actions {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 24px;
+            gap: 28px;
             margin-bottom: 48px;
             flex-wrap: wrap;
-            width: 100%;
         }
-
-        /* Forza il btn-oval a non espandersi a tutta larghezza */
-        .fs-thanks__actions .btn-oval {
-            width: auto !important;
-            flex-shrink: 0;
-        }
-
         .fs-thanks__note {
-            width: 100%;
             padding: 20px 28px;
             background: var(--surface-2);
             border: 1px solid var(--line);
@@ -195,47 +165,11 @@ import '../../styles/fontshop.css';
             font-weight: 300;
             color: var(--ink-soft);
         }
-
-        .fs-thanks__note a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        /* Ghost button coerente con il resto della pagina */
-        .fs-thanks__actions .fd-btn-ghost {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--ink-soft);
-            text-decoration: none;
-            transition: color .2s;
-            white-space: nowrap;
-        }
-
-        .fs-thanks__actions .fd-btn-ghost:hover {
-            color: var(--ink);
-        }
+        .fs-thanks__note a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 
         @media (max-width: 767px) {
-            .fs-thanks {
-                padding: 60px 20px;
-                align-items: flex-start;
-            }
-            .fs-thanks__inner {
-                margin: 0 auto;
-            }
-            .fs-thanks__title {
-                font-size: clamp(36px, 10vw, 52px);
-                letter-spacing: -1.5px;
-            }
-            .fs-thanks__actions {
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
-            }
-            .fs-thanks__actions .btn-oval {
-                width: auto !important;
-            }
+            .fs-thanks { padding: 60px 20px; }
+            .fs-thanks__title { font-size: clamp(36px, 10vw, 52px); letter-spacing: -1.5px; }
         }
     </style>
 
